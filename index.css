@@ -1,0 +1,549 @@
+/*Entre 0 et 576px*/
+
+/*************************************/
+/*************GLOBAL*****************/
+/***********************************/
+
+/*déclaration des polices d'écriture*/
+@font-face {
+	font-family: 'Roboto-Black';
+	src: url(webagency_images/webagency_images/fonts/Roboto-Black.ttf);
+}
+@font-face {
+	font-family: 'Roboto-Medium';
+	src: url(webagency_images/webagency_images/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url(webagency_images/webagency_images/fonts/Roboto-Light.ttf);
+}
+
+/*On définit la police d'écriture pour les différent élément*/
+body {
+	font-family: 'Roboto-Medium';
+}
+h1, h2 {
+	font-family: 'Roboto-Black';
+}
+
+/*On définit la taille de la police*/
+h1 {
+	font-size: 3em
+}
+
+/*CSS Général*/
+button {
+	border-radius: 2px;
+	border-bottom: 5px #4494bb solid;
+	padding: 5px;
+	background-color: #5cadd3;
+	color: white;
+	margin-top: 5px;
+}
+img{
+	width: 100%;
+}
+
+/*class outil*/
+.flex {
+	display: flex;
+}
+.column {
+	flex-direction: column;
+}
+.center {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+.left {
+	text-align: left;
+}
+
+/*class outil 
+Séparateur entre titre et texte*/
+.point-bleu {
+	width: 13px;
+	height: 13px;
+	background-color: #5cadd3;
+	border-radius: 100%;
+	margin-left: -19px;
+}
+.point-blanc {
+	width: 25px;
+	height: 25px;
+	background-color: white;
+	border-radius: 100%;
+}
+.trait {
+	height: 1px;
+	background-color: #ebebeb;
+	margin: 5% 30%;
+}
+
+/*Element non présent sur smartphone*/
+.arrow-left, .arrow-right, #slide p, #portfolio nav {
+	display: none;
+}
+
+/************************************/
+/***************HEADER***************/
+/************************************/
+header {
+	position: fixed;
+	width: 100%;
+	background-color: white;
+	z-index: 3;
+}
+
+/*Mise en forme du logo*/
+header img {
+	width: auto;
+}
+
+/*Espacement entre item du menu*/
+header nav, header ul, a {
+	width: 100%;
+	justify-content: space-around;
+	color: #848484;
+	padding-bottom: 7px;
+}
+
+/************************************/
+/***************Slide****************/
+/************************************/
+#accueil > div:first-child {
+	height: 115px;
+}
+#slide {
+	overflow: hidden;
+    position: relative;
+}
+#slide img {
+	width: 100%;
+}
+
+/*paramettre de la barre progress*/
+#progress {
+	position: absolute;
+    bottom: 3px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#progress div{
+	width: 15%;
+    height: 5px;
+    background-color: #5CADD3;
+}
+
+/*partie texte du slide*/
+#slide .text {
+    height: 40%;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+	left: 5%;
+    transform: translateY(-50%);
+	color: white;
+	font-size: 0.8em;
+}
+#slide strong {
+	color: #5cadd3;
+}
+
+/************************************/
+/***************Service**************/
+/************************************/
+#service {
+	padding: 90px 0px 20px 0px;
+}
+/*Positionnement des points*/
+#service li .point-blanc {
+	transform: translate(-15px, 25px);
+}
+#service li .point-bleu {
+	transform: translate(-15px, 30px);
+}
+#service i {
+	color: #5cadd3;
+	font-size: 1.9em;
+}
+
+/*fond fontawesom*/
+.font-item {
+	width: 70px;
+	height: 70px;
+	border: 1px #ebebeb solid;
+	border-radius: 50%;
+}
+
+/************************************/
+/**************Portfolio*************/
+/************************************/
+#portfolio {
+	background-color: #f5f5f5;
+	padding-top: 90px;
+}
+
+/*séparateur titre et texte*/
+#portfolio .trait {
+	width: 40%;
+}
+
+/* Menu sélection smartphone */
+.custom-select {
+	position: relative;
+	font-family: 'Roboto-Light';
+}
+select {
+	color: white;
+	padding: 10px;
+	background-color: #5cadd3;
+	border-radius: 5px;
+	-moz-appearance: none;
+}
+
+/*agencement des all item*/
+#all-item {
+	flex-wrap: wrap;
+	width: 90%;
+	padding-top: 0px;
+	justify-content: space-around;
+}
+
+/*dimenssion image*/
+#all-item img {
+	width: 270px;
+	padding: 15px 0px;
+}
+
+/*superposition texte sur image*/
+#all-item span {
+	position: absolute;
+	margin: -115px 0px 0px 70px;
+	width: 40px;
+	height: 27px;
+	border: 2px white solid;
+	border-radius: 50%;
+	background-color: #5cadd3;
+	color: white;
+	padding-top: 13px;
+}
+ins strong {
+	font-size: 16px;
+	font-family: 'Roboto-Light';
+}
+ins {
+	position: absolute;
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.6);
+	margin: -90px 0px 0px -135px;
+	width: 260px;
+	height: 54px;
+	padding: 5px;
+	font-size: 0.8em;
+	color: white;
+}
+
+/************************************/
+/***************Contact**************/
+/************************************/
+#contact {
+	padding-top: 85px;
+}
+iframe {
+	position: relative;
+	padding-top: 120px;
+}
+/*Mise en page formulaire*/
+#filtre-blanc {
+	position: absolute;
+	border-radius: 5px;
+	padding: 10px 0px;
+}
+.coordonnee {
+	color: #848484;
+}
+form{
+	padding-top: 170px;
+}
+input, textarea {
+	width: 80%;
+	border-radius: 5px;
+	border: 1px grey solid;
+	padding-left: 2%;
+	font-family: 'Roboto-Medium';
+	margin: 10px 0px;
+	font-size: 15px;
+}
+input {
+	height: 25px;
+}
+textarea {
+	padding-top: 5px;
+	height: 300px;
+}
+
+/************************************/
+/***************Media Q**************/
+/************************************/
+
+/********************** Média à partir 576**********************/
+@media all and (min-width: 576px) {
+	h2 {
+		font-size: 1.5em;
+	}
+
+	/************************************/
+	/***************Service**************/
+	/************************************/
+	#service li {
+		flex-direction: initial;
+		text-align: left;
+		justify-content: left;
+		margin: 25px 0px;
+	}
+
+	#service ul {
+		padding-left: 30%;
+	}
+}
+
+/********************** Média à partir 769 **********************/
+@media all and (min-width: 768px) {
+	/*élément présent et retirer*/
+	.arrow-left, .arrow-right, #portfolio nav {
+		display: unset;
+	}
+	.custom-select {
+		display: none;
+	}
+
+	/************************************/
+	/***************HEADER***************/
+	/************************************/
+	header {
+		flex-direction: inherit !important;
+		padding: 0px;
+	}
+	
+	/*Navigation*/
+	header nav, header ul, a {
+		padding: 0px;
+	}
+	header li a:hover {
+		border-top: 3px #5cadd3 solid;
+		color: black;
+		padding-top: 32px;
+	}
+	
+	/************************************/
+	/***************Slide****************/
+	/************************************/
+	#accueil > div:first-child {
+    height: 80px;
+	}
+	#slide .text{
+		font-size: 1em;
+	}
+	/*fleche slide*/
+	#conteneur-fleche
+	{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		height: 60px;
+		justify-content: space-between;
+	
+	}
+	.arrow-left i, .arrow-right i {
+		background-color: rgba(68, 67, 72, 0.9);
+		font-size: 1.4em;
+		color: white;
+		transform: translateY(25%);
+	}
+	.arrow-left i {
+		padding: 10px 10px 10px 0;
+		border-radius: 0px 40px 40px 0px;
+	}
+	.arrow-right i {
+		padding: 10px 0px 10px 10px;
+		border-radius: 40px 0px 0px 40px;
+		right: 0px;
+	}
+
+	/************************************/
+	/**************Portfolio*************/
+	/************************************/
+
+	/*Menu sur la longueur*/
+	/*menu de navigation portfolio*/
+	#portfolio ul {
+		border-radius: 10px;
+		background-color: #e5e5e5;
+		height: 50px;
+		border-bottom: 2px #e5e5e5 solid;
+	}
+	#portfolio li {
+		padding: 0px 15px;
+		color: #64686d;
+	}
+
+	/*élément hover du menu*/
+	.triangle {
+		display: none;
+		position: absolute;
+		border-top: 10px solid #4494bb;
+		border-right: 10px solid transparent;
+		border-left: 10px solid transparent;
+		margin-top: 34px;
+	}
+	@-moz-document url-prefix() { 
+  		.triangle {
+		 margin-top: 68px;
+	  }
+	}
+
+	#portfolio li:hover {
+		height: 100%;
+		border-bottom: 4px #4494bb solid;
+		border-radius: 5px;
+		background: #5cadd3;
+		color: white;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#portfolio li:hover .triangle {
+		display: block;
+	}
+
+	/************************************/
+	/***************Contact**************/
+	/************************************/
+	#contact {
+		height: 800px;
+		background-color: rgba(0, 0, 255, 0.15);
+		position: relative;
+		padding-top: 0px;
+		align-items: flex-end;
+	}
+
+	iframe {
+		width: 100%;
+		height: 840px;
+		opacity: 0.5;
+		padding-top: 0px;
+	}
+	#filtre-blanc{
+		margin-top: 85px;
+		background-color: rgba(255, 255, 255, 0.8);
+		width: 440px;
+		position: absolute;
+		right: 10%;
+	}
+	form{
+	padding-top: 0px;
+}
+	
+}
+
+/********************** Média à partir 992 **********************/
+@media all and (min-width: 992px) {
+	h2 {
+		font-size: 2em;
+	}
+	/*class outil*/
+	.trait {
+		margin: 2% 45%;
+	}
+
+	/*élément présent*/
+	#slide p {
+		display: unset;
+	}
+
+	/************************************/
+	/***************Slide****************/
+	/************************************/
+	/*taille police texte en dessous du titre*/
+	#slide p {
+		font-size: 0.9em;
+		line-height: 4;
+	}
+	#slide .text {
+		width: 55%;
+	}
+
+	button {
+		font-size: 1.2em;
+	}
+
+	/************************************/
+	/***************Service**************/
+	/************************************/
+	#service ul {
+		padding-left: 0%;
+	}
+
+	#bloc-image-texte {
+		flex-direction: inherit;
+		justify-content: center;
+	}
+
+	/************************************/
+	/**************Portfolio*************/
+	/************************************/
+	/*Séparation titre et texte*/
+	#portfolio .trait {
+		width: 15%;
+	}
+
+	/*hover des image*/
+	#all-item span,
+	ins {
+		display: none;
+	}
+
+	#all-item div:hover ins {
+		display: block
+	}
+
+	#all-item div:hover span {
+		display: block;
+	}
+
+	ins {
+		margin: -90px 0px 0px 0px;
+	}
+
+	#all-item span {
+		margin: -115px 0px 0px 210px;
+	}
+}
+
+/********************** Média à partir 1200 **********************/
+@media all and (min-width: 1200px) {
+
+	/************************************/
+	/***************HEADER***************/
+	/************************************/
+	header {
+		text-align: left !important;
+	}
+
+	header img {
+		padding-left: 10%;
+	}
+
+	header nav {
+		width: 50%;
+	}
+}
+/****uniquement 4 items par ligne*****/
+@media all and (min-width: 1349px) {
+	#all-item {
+		width: 1349px;
+	}
+}
